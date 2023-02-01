@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="commons/header :: header"></head>
+<body>
+
+    <div th:replace="commons/menu :: menu"></div>
+    <div class="container-fluid">
+        <form class="row g-3" method="post" th:action="@{/permisos/update}">
+            <div class="col-md-4">
+                <label for="descripcion" class="form-label" th:text="#{permiso.descripcion}">Descripción</label>
+                <input type="descripcion" class="form-control" id="descripcion" name="descripcion" th:value="${permiso.descripcion}" >
+            </div>
+
+            <div class="col-4">
+                <a th:href="@{/permisos/list}" href="list.html" class="btn btn-primary" th:text="#{list.atras}">Cancelar</a>
+                <button class="btn btn-primary" type="submit" th:text="#{list.actualizar}">Actualizar</button>
+            </div>
+        </form>
+    </div>
+
+    <div th:replace="commons/footer :: footer" class="container"></div>
+</body>
+</html>

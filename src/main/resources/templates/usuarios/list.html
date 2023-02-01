@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="commons/header :: header"> </head>
+<body>
+    
+  <div th:replace="commons/menu :: menu"></div>
+    
+    <!-- CARDS -->
+    <div class="container">
+      <a th:href="@{/usuarios/create}" th:text="#{list.crear}" href="create.html" class="btn btn-primary">Crear</a>
+        <div class="row">
+            <table class="table table-striped table-hover">
+              <caption th:text="#{usuario.titulo}">Lista de usuarios</caption>
+                <thead>
+                  <tr>
+                    <th scope="col" th:text="#{usuario.codigo}">Código</th>
+                    <th scope="col" th:text="#{usuario.nombre}">Nombre</th>
+                    <th scope="col" th:text="#{usuario.email}">Email</th>
+
+                    <th scope="col" th:text="#{list.editar}">Editar</th>
+                    <th scope="col" th:text="#{list.eliminar}">Eliminar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <div th:each="usuario : ${usuarios}" class="col-3">
+                        <tr>
+                            <th scope="row" th:text="${usuario.codigo}">1</th>
+                            <td th:text="${usuario.nombre}">Ejemplo</td>
+                            <td th:text="${usuario.email}">Email</td>
+                            <td><a th:href="@{/usuarios/edit/}+${usuario.codigo}" th:text="#{list.editar}" href="edit.html" class="btn btn-primary bi bi-pen"></a></td>
+                            <td><a th:href="@{/usuarios/delete/}+${usuario.codigo}" th:text="#{list.borrar}" href="list.html" class="btn btn-primary bi bi-trash"></a></td>
+                        </tr>
+                    </div>
+                </tbody>
+            </table> 
+        </div>
+    </div>
+
+  </div>
+
+  <div th:replace="commons/footer :: footer" class="container"></div>
+</body>
+</html>
