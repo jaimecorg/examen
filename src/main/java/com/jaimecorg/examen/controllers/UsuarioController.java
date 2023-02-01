@@ -1,7 +1,6 @@
 package com.jaimecorg.examen.controllers;
 
 import java.io.IOException;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,14 +23,11 @@ public class UsuarioController {
     @Autowired
     UsuariosServices usuariossService;
 
-    @RequestMapping(path = "/list")
-    public ModelAndView list(){
-
-        List<Usuario> usuarios = usuariossService.findAll();
+    @GetMapping(value = "/list")
+    public ModelAndView list(Model model) {
 
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("usuarios", usuarios);
-        modelAndView.setViewName("usuarios/list");
+        modelAndView.setViewName("redirect:list/1/codigo/asc");
 
         return modelAndView;
     } 
