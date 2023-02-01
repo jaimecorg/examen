@@ -13,11 +13,11 @@
               <caption th:text="#{grupo.titulo}">Lista de grupos</caption>
                 <thead>
                   <tr>
-                    <th scope="col" th:text="#{grupo.codigo}">Código</th>
-                    <th scope="col" th:text="#{grupo.nombre}">Nombre</th>
+                    <th scope="col" >Código</th>
+                    <th scope="col">Nombre</th>
 
-                    <th scope="col" th:text="#{list.editar}">Editar</th>
-                    <th scope="col" th:text="#{list.eliminar}">Eliminar</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Eliminar</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -25,8 +25,8 @@
                         <tr>
                             <th scope="row" th:text="${grupo.codigo}">1</th>
                             <td th:text="${grupo.nombre}">Ejemplo</td>
-                            <td><a th:href="@{/grupos/edit/}+${grupo.codigo}" th:text="#{list.editar}" href="edit.html" class="btn btn-primary bi bi-pen"></a></td>
-                            <td><a th:href="@{/grupos/delete/}+${grupo.codigo}" th:text="#{list.borrar}" href="list.html" class="btn btn-primary bi bi-trash"></a></td>
+                            <td><a th:href="@{/grupos/edit/}+${grupo.codigo}" href="edit.html" class="btn btn-primary bi bi-pen"></a>Editar</td>
+                            <td><a th:href="@{/grupos/delete/}+${grupo.codigo}" href="list.html" class="btn btn-primary bi bi-trash"></a>Borrar</td>
                         </tr>
                     </div>
                 </tbody>

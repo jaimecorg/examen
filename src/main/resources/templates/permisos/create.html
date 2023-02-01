@@ -7,11 +7,11 @@
     <div class="container-fluid">
         <form class="row g-3" method="post" th:action="@{/permisos/save}">
             <div class="col-md-4">
-                <label for="descripcion" class="form-label" th:text="#{permiso.descripcion}">Descripción</label>
+                <label for="descripcion" class="form-label">Descripción</label>
                 <input type="descripcion" class="form-control" id="descripcion" name="descripcion">
             </div>
             <div class="col-1">
-                <a th:href="@{/permisos/list}" href="list.html" class="btn btn-primary" th:text="#{list.atras}">Cancelar</a>
+                <a th:href="@{/permisos/list}" href="list.html" class="btn btn-primary">Cancelar</a>
             </div>
             <div class="col-1">
                 <input type="submit" class="btn btn-primary" th:value="#{list.crear}"></input>

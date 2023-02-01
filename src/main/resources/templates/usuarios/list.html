@@ -25,10 +25,10 @@
                     <div th:each="usuario : ${usuarios}" class="col-3">
                         <tr>
                             <th scope="row" th:text="${usuario.codigo}">1</th>
-                            <td th:text="${usuario.nombre}">Ejemplo</td>
-                            <td th:text="${usuario.email}">Email</td>
-                            <td><a th:href="@{/usuarios/edit/}+${usuario.codigo}" th:text="#{list.editar}" href="edit.html" class="btn btn-primary bi bi-pen"></a></td>
-                            <td><a th:href="@{/usuarios/delete/}+${usuario.codigo}" th:text="#{list.borrar}" href="list.html" class="btn btn-primary bi bi-trash"></a></td>
+                            <td>Ejemplo</td>
+                            <td>Email</td>
+                            <td><a th:href="@{/usuarios/edit/}+${usuario.codigo}" href="edit.html" class="btn btn-primary bi bi-pen"></a>Editar</td>
+                            <td><a th:href="@{/usuarios/delete/}+${usuario.codigo}"href="list.html" class="btn btn-primary bi bi-trash"></a>Borrar</td>
                         </tr>
                     </div>
                 </tbody>

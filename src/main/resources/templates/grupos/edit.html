@@ -7,12 +7,12 @@
     <div class="container-fluid">
         <form class="row g-3" method="post" th:action="@{/grupos/update}">
             <div class="col-md-4">
-                <label for="nombre" class="form-label" th:text="#{grupo.nombre}">Nombre</label>
+                <label for="nombre" class="form-label">Nombre</label>
                 <input type="nombre" class="form-control" id="nombre" name="nombre" th:value="${grupo.nombre}" >
             </div>
             <div class="col-4">
-                <a th:href="@{/grupos/list}" href="list.html" class="btn btn-primary" th:text="#{list.atras}">Cancelar</a>
-                <button class="btn btn-primary" type="submit" th:text="#{list.actualizar}">Actualizar</button>
+                <a th:href="@{/grupos/list}" href="list.html" class="btn btn-primary">Cancelar</a>
+                <button class="btn btn-primary" type="submit">Actualizar</button>
             </div>
         </form>
     </div>

@@ -7,16 +7,16 @@
     <div class="container-fluid">
         <form class="row g-3" method="post" th:action="@{/usuarios/save}">
             <div class="col-md-4">
-                <label for="nombre" class="form-label" th:text="#{usuario.nombre}">Nombre</label>
+                <label for="nombre" class="form-label">Nombre</label>
                 <input type="nombre" class="form-control" id="nombre" name="nombre">
             </div>
             <div class="col-md-4">
-                <label for="apellido" class="form-label" th:text="#{cliente.apellido}">Email</label>
+                <label for="apellido" class="form-label" >Email</label>
                 <input type="text" class="form-control" id="email" name="email">
             </div>
 
             <div class="col-1">
-                <a th:href="@{/usuarios/list}" href="list.html" class="btn btn-primary" th:text="#{list.atras}">Cancelar</a>
+                <a th:href="@{/usuarios/list}" href="list.html" class="btn btn-primary">Cancelar</a>
             </div>
             <div class="col-1">
                 <input type="submit" class="btn btn-primary" th:value="#{list.crear}"></input>

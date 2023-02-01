@@ -7,13 +7,13 @@
     <div class="container-fluid">
         <form class="row g-3" method="post" th:action="@{/permisos/update}">
             <div class="col-md-4">
-                <label for="descripcion" class="form-label" th:text="#{permiso.descripcion}">Descripción</label>
+                <label for="descripcion" class="form-label">Descripción</label>
                 <input type="descripcion" class="form-control" id="descripcion" name="descripcion" th:value="${permiso.descripcion}" >
             </div>
 
             <div class="col-4">
-                <a th:href="@{/permisos/list}" href="list.html" class="btn btn-primary" th:text="#{list.atras}">Cancelar</a>
-                <button class="btn btn-primary" type="submit" th:text="#{list.actualizar}">Actualizar</button>
+                <a th:href="@{/permisos/list}" href="list.html" class="btn btn-primary">Cancelar</a>
+                <button class="btn btn-primary" type="submit">Actualizar</button>
             </div>
         </form>
     </div>
